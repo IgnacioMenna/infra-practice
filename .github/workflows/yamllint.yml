@@ -1,9 +1,14 @@
 name: yamllint
+
 on:
+  push:
+    branches:
+      - main
   pull_request:
     paths:
       - '**/*.yml'
       - '**/*.yaml'
+
 jobs:
   yamllint:
     runs-on: ubuntu-latest
@@ -14,5 +19,3 @@ jobs:
           python-version: '3.10'
       - run: pip install --upgrade pip yamllint
       - run: yamllint .
-
-      
