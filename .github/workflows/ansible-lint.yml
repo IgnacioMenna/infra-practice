@@ -13,6 +13,3 @@ jobs:
           python-version: '3.10'
       - run: pip install --upgrade pip ansible ansible-lint
       - run: ansible-lint ansible/
-
-
-      
