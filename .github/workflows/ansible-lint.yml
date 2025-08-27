@@ -1,6 +1,8 @@
 name: ansible-lint
 on:
   pull_request:
+    branches:
+      - main
     paths:
       - 'ansible/**'
 jobs:
